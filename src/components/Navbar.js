@@ -37,15 +37,15 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar sticky top-0 z-50 flex justify-between items-center bg-bg dark:bg-bg-dark text-fg dark:text-fg-dark border-border dark:border-border-dark px-6 md:px-12 py-4">
+    <nav className="navbar sticky top-0 z-50 flex justify-between items-center bg-bg dark:bg-bg-dark text-fg dark:text-fg-dark border-border dark:border-border-dark px-6 md:px-12 lg:px-20 py-4">
       <a href="./">
         <span className="text-2xl font-bold hover:text-indigo-600 dark:hover:text-indigo-400">
           Turbash Negi
         </span>
       </a>
 
-      <div className="flex nav-links-container gap-5 md:gap-10 items-center">
-        <ul className="nav-links hidden md:flex gap-10 text-lg">
+      <div className="flex nav-links-container gap-5 lg:gap-10 items-center">
+        <ul className="nav-links hidden md:flex gap-5 lg:gap-10 text-lg">
           {links.map((link) => (
             <a key={link} href={`#${link.toLowerCase()}`}>
               <li className="font-semibold hover:text-primary dark:hover:text-primary-dark cursor-pointer transition-colors duration-300 ">
@@ -59,10 +59,11 @@ export default function Navbar() {
           {theme === "dark" ? "🌙" : "☀️"}
         </button>
         <svg
-          className="block md:hidden w-6 h-6 text-gray-500 dark:text-gray-400 transition-colors duration-300"
+          className="block md:hidden cursor-pointer w-6 h-6 text-fg dark:text-fg-dark  hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
+              aria-label="Close menu"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           viewBox="0 0 24 24"
