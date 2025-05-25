@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [theme, setTheme] = useState("light");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [spin, setSpin] = useState(false);
 
   const links = ["Home", "About", "Skills", "Projects", "Contact"];
 
@@ -33,11 +36,12 @@ export default function Navbar() {
   }, [menuOpen]);
 
   const toggleTheme = () => {
+    setSpin(true);
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
+    setTimeout(() => setSpin(false), 500);  };
 
   return (
-    <nav className="navbar sticky top-0 z-50 flex justify-between items-center bg-bg dark:bg-bg-dark text-fg dark:text-fg-dark border-border dark:border-border-dark px-6 md:px-12 lg:px-20 py-4">
+    <nav className="navbar sticky top-0 z-50 flex justify-between items-center bg-bg dark:bg-bg-dark text-fg dark:text-fg-dark border-border dark:border-border-dark px-6 md:px-12 lg:px-20 py-4 ">
       <a href="./">
         <span className="text-2xl font-bold hover:text-indigo-600 dark:hover:text-indigo-400">
           Turbash Negi
@@ -45,18 +49,20 @@ export default function Navbar() {
       </a>
 
       <div className="flex nav-links-container gap-5 lg:gap-10 items-center">
-        <ul className="nav-links hidden md:flex gap-5 lg:gap-10 text-lg">
+        <ul className="nav-links hidden md:flex gap-5 lg:gap-10">
           {links.map((link) => (
             <a key={link} href={`#${link.toLowerCase()}`}>
-              <li className="font-semibold hover:text-primary dark:hover:text-primary-dark cursor-pointer transition-colors duration-300 ">
+              <li className="font-semibold text-lg hover:text-primary dark:hover:text-primary-dark cursor-pointer transition-colors duration-300 ">
                 {link}
               </li>
             </a>
           ))}
         </ul>
 
-        <button onClick={toggleTheme} className="text-xl">
-          {theme === "dark" ? "🌙" : "☀️"}
+        <button onClick={toggleTheme} className="toggle-theme-btn">
+          <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon } className={`text-2xl ${
+    theme === "dark" ? "text-yellow-300" : "text-blue-800"}  ${spin ? "animate-spin-once" : ""
+  }`}/>
         </button>
         <svg
           className="block md:hidden cursor-pointer w-6 h-6 text-fg dark:text-fg-dark  hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
