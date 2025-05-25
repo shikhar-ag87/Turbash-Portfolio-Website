@@ -36,10 +36,10 @@ const Hero = () => {
               to open source. Let’s collaborate and create something amazing.
             </p>
             <div className="mt-6 flex xs:flex-row flex-col gap-4 z-0 button-container">
-              <button className="bg-primary dark:bg-primary-dark text-white hover:bg-primary/90 rounded-full px-8 py-3 transition-scale duration-300 transform hover:scale-105">
+              <button className="bg-primary dark:bg-primary-dark text-white hover:bg-primary/90 hover:dark:bg-primary-dark rounded-full px-8 py-3 transition-scale duration-300 transform hover:scale-105">
                 View My Work
               </button>
-              <button className="border border-primary dark:border-primary-dark text-primary dark:text-primary-dark hover:bg-primary/10 rounded-full px-8 py-3 transition-scale duration-300 transform hover:scale-105">
+              <button className="border border-primary dark:border-primary-dark text-primary dark:text-primary-dark hover:bg-primary/10 dark rounded-full px-8 py-3 transition-scale duration-300 transform hover:scale-105">
                 Get In Touch
               </button>
             </div>
