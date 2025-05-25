@@ -7,7 +7,7 @@ const Hero = () => {
   id="home"
   className="px-6 md:px-12 mt-20 md:mt-32 z-0 relative"
 >
-  <div className="max-w-[85%] mx-auto flex flex-col md:flex-row gap-10 items-center justify-between">
+  <div className="lg:max-w-[85%] mx-auto flex flex-col md:flex-row gap-10 items-center justify-between">
         <div className="text-container text-center md:text-left items-center md:items-start gap-4 flex flex-col">
         <h1 className="text-4xl md:text-6xl font-bold">
           Hi, I'm{" "}
