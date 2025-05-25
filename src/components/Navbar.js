@@ -41,15 +41,16 @@ export default function Navbar() {
     setTimeout(() => setSpin(false), 500);  };
 
   return (
-    <nav className="navbar sticky top-0 z-50 flex justify-between items-center bg-bg dark:bg-bg-dark text-fg dark:text-fg-dark border-border dark:border-border-dark px-6 md:px-12 lg:px-20 py-4 ">
-      <a href="./">
+    <nav className="navbar sticky top-0  px-6 md:px-12 lg:px-20 py-4 z-10">
+      <div className="mt-2 flex justify-between z-50 bg-white dark:bg-slate-900 text-fg dark:text-fg-dark items-center lg:max-w-[80%] mx-auto border border-border dark:border-border-dark-dark rounded-full px-8 py-4 shadow-md shadow-black dark:shadow-white">
+        <a href="./">
         <span className="text-2xl font-bold hover:text-indigo-600 dark:hover:text-indigo-400">
           Turbash Negi
         </span>
       </a>
 
-      <div className="flex nav-links-container gap-5 lg:gap-10 items-center">
-        <ul className="nav-links hidden md:flex gap-5 lg:gap-10">
+      <div className="flex nav-links-container gap-2 lg:gap-5 xl:gap-10 items-center">
+        <ul className="nav-links hidden md:flex gap-2 lg:gap-5 xl:gap-10">
           {links.map((link) => (
             <a key={link} href={`#${link.toLowerCase()}`}>
               <li className="font-semibold text-lg hover:text-primary dark:hover:text-primary-dark cursor-pointer transition-colors duration-300 ">
@@ -104,6 +105,7 @@ export default function Navbar() {
             </ul>
           </div>
         )}
+      </div>
       </div>
     </nav>
   );
