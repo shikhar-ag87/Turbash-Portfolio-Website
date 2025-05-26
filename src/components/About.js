@@ -17,11 +17,11 @@ const About = () => {
   ]
   return (
     <section id='about' >
-      <div className="about-container py-16 px-6 text-center lg:max-w-[85%] mx-auto">
+      <div className="about-container mt-20 md:mt-32 mb-10 md:mb-16 px-6 text-center lg:max-w-[85%] 2xl:max-w-[60%] mx-auto">
         <h2 className="text-4xl font-bold mb-10">
           About Me
         </h2>
-        <div className="card-grid grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 justify-items-center">
+        <div className="card-grid grid grid-cols-1 md:grid-cols-2 gap-y-10 mt-20 md:mt-32 justify-items-center">
           {cards.map(card => { return (
             <Card key={card.title} title={card.title} content={card.content}/>
           )})}
