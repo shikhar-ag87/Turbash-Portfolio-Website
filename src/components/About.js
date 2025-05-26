@@ -21,7 +21,7 @@ const About = () => {
         <h2 className="text-4xl font-bold mb-10">
           About Me
         </h2>
-        <div className="card-grid grid grid-cols-1 md:grid-cols-2 gap-y-10 mt-20 md:mt-32 justify-items-center">
+        <div className="card-grid grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-2 mt-20 md:mt-32 justify-items-center">
           {cards.map(card => { return (
             <Card key={card.title} title={card.title} content={card.content}/>
           )})}
