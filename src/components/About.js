@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './Card'
+import AboutCard from './AboutCard'
 const About = () => {
   const cards=[
     {title: "Who I Am",
@@ -23,7 +23,7 @@ const About = () => {
         </h2>
         <div className="card-grid grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-2 mt-20 md:mt-32 justify-items-center">
           {cards.map(card => { return (
-            <Card key={card.title} title={card.title} content={card.content}/>
+            <AboutCard key={card.title} title={card.title} content={card.content}/>
           )})}
         </div>
       </div>

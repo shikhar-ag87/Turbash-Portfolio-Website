@@ -35,7 +35,7 @@ const Hero = () => {
               I build full-stack apps, simplify tech on YouTube, and contribute
               to open source. Let’s collaborate and create something amazing.
             </p>
-            <div className="mt-6 flex xs:flex-row flex-col gap-4 z-0 button-container">
+            <div className="mt-6 flex xs:flex-row flex-col gap-5 z-0 button-container">
               <button className="bg-primary text-white hover:bg-primary/90 rounded-full px-8 py-3 transition-scale duration-300 transform hover:scale-105">
                 View My Work
               </button>
