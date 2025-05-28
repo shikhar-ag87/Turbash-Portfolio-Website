@@ -9,6 +9,7 @@ module.exports = {
       },
       screens: {
         xs: "400px",
+        ms:"328px"
       },
       colors: {
         primary: {
@@ -39,7 +40,7 @@ module.exports = {
           dark: {
             hero: "#0f172a",
             about: "#16243e",
-            skills: "#24365a",
+            skills: "#0f172a",
             projects: "#1e293b",
             contact: "#0f172a",
             footer: "#0f172a",
@@ -49,9 +50,11 @@ module.exports = {
         cardAlt: {
           about: "#ffffff",
           skills: "#f8fafc",
+          projects: "1e293b",
           dark: {
-            about: "#1e293b",
-            skills: "#334155",
+            about: "#0f172a",
+            skills: "#16243e",
+            projects: "0f172a",
           },
         },
       },

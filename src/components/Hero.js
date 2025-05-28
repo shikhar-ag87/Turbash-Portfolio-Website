@@ -47,15 +47,13 @@ const Hero = () => {
         </div>
         <div className="image-container justify-items-center md:w-1/2">
           <div className="xs:w-[389px] xs:h-[279] font-mono rounded-xl shadow-xl border border-gray-300 dark:border-slate-700 overflow-hidden bg-[#f9fafb] dark:bg-[#0f172a] text-gray-800 dark:text-slate-200">
-            {/* Top bar like terminal */}
             <div className="flex items-center space-x-2 px-5 py-3 bg-gray-200 dark:bg-slate-800 border-b border-gray-300 dark:border-slate-600">
               <span className="w-3 h-3 rounded-full bg-red-500"></span>
               <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
               <span className="w-3 h-3 rounded-full bg-green-500"></span>
             </div>
 
-            {/* Code-style content */}
-            <div className="px-6 sm:px-10 py-8 text-sm text-bg bg-gray-900 dark:bg-bg-dark leading-relaxed break-words">
+            <div className="px-6 sm:px-10 py-8 text-sm text-bg bg-gray-950 dark:bg-slate-950 leading-relaxed break-words">
               <pre className="whitespace-pre-wrap">
                 <span className="text-pink-600 dark:text-pink-400">const</span>{" "}
                 <span className="text-blue-600 dark:text-blue-300">dev</span> ={" "}

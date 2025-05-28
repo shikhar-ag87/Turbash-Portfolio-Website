@@ -25,7 +25,7 @@ const About = () => {
   ];
   return (
     <section id="about" className="bg-sectionBg-about dark:bg-sectionBg-dark-about">
-      <div className="about-container  px-6 py-20 text-center lg:max-w-[85%] 2xl:max-w-[70%] mx-auto ">
+      <div className="about-container px-6 py-20 text-center lg:max-w-[85%] 2xl:max-w-[70%] mx-auto ">
         <h2 className="text-4xl font-bold mb-10">About Me</h2>
         <div className="card-grid grid grid-cols-1 md:grid-cols-2 gap-y-14 gap-x-4 justify-items-center">
           {cards.map((card) => {
