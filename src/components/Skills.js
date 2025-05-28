@@ -5,7 +5,7 @@ const Skills = () => {
   const cards = [
     {
       icon: (
-        <FaReact className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
+        <FaReact className="w-10 h-10 text-indigo-600 dark:text-primary" />
       ),
       title: "Frontend",
       skills: [
@@ -51,10 +51,10 @@ const Skills = () => {
     },
   ];
   return (
-    <section id="skills">
-      <div className="skills-container py-20 px-6 md:px-16 lg:px-28 bg-gray-50 dark:bg-slate-900 text-fg dark:text-fg-dark flex flex-col items-center">
-        <h2 className="text-4xl font-bold mb-12 text-indigo-700 dark:text-indigo-400">My Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+    <section id="skills" className="bg-sectionBg-skills dark:bg-sectionBg-dark-skills">
+      <div className="skills-container py-20 px-6 bg-gray-50 dark:bg-slate-900 text-fg dark:text-fg-dark flex flex-col items-center ">
+        <h2 className="text-4xl font-bold mb-12 text-indigo-700 dark:text-primary">My Skills</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-14 gap-x-4 w-full justify-items-center lg:max-w-[85%] 2xl:max-w-[70%]">
           {cards.map((card,idx) => {
             return (
               <SkillsCard

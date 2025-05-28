@@ -15,10 +15,6 @@ module.exports = {
           DEFAULT: "#3b82f6",
           dark: "#60a5fa",
         },
-        secondary: {
-          DEFAULT: "#6366f1",
-          dark: "#818cf8",
-        },
         bg: {
           DEFAULT: "#ffffff",
           dark: "#0f172a",
@@ -27,29 +23,39 @@ module.exports = {
           DEFAULT: "#1e293b",
           dark: "#f1f5f9",
         },
-        muted: {
-          DEFAULT: "#64748b",
-          dark: "#94a3b8",
-        },
         border: {
           DEFAULT: "#e2e8f0",
           dark: "#334155",
         },
-        card: {
-          DEFAULT: "#f8fafc",
-          dark: "#1e293b",
+
+        sectionBg: {
+          hero: "#ffffff",
+          about: "#e2e8f0",
+          skills: "#f3f4f6",
+          projects: "#e2e8f0",
+          contact: "#f9fafb",
+          footer: "#f1f5f9",
+
+          dark: {
+            hero: "#0f172a",
+            about: "#16243e",
+            skills: "#24365a",
+            projects: "#1e293b",
+            contact: "#0f172a",
+            footer: "#0f172a",
+          },
         },
-        highlight: {
-          DEFAULT: "#22c55e",
-          dark: "#4ade80",
-        },
-        danger: {
-          DEFAULT: "#ef4444",
-          dark: "#f87171",
+
+        cardAlt: {
+          about: "#ffffff",
+          skills: "#f8fafc",
+          dark: {
+            about: "#1e293b",
+            skills: "#334155",
+          },
         },
       },
     },
   },
-
   plugins: [],
 };

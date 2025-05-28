@@ -43,7 +43,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar sticky top-0  px-6 md:px-12 lg:px-20 py-4 z-10">
-      <div className="mt-2 flex justify-between z-50 bg-white dark:bg-slate-900 text-fg dark:text-fg-dark items-center lg:max-w-[80%] mx-auto border border-border dark:border-border-dark-dark rounded-full px-8 py-4 shadow-md shadow-black dark:shadow-white">
+      <div className="mt-2 flex justify-between z-50 bg-white dark:bg-slate-900 text-fg dark:text-fg-dark items-center lg:max-w-[80%] mx-auto border border-border dark:border-border-dark rounded-full px-4 xs:px-8 py-4 shadow-lg shadow-black/70 dark:shadow-white/10">
         <a href="./">
           <span className="text-xl sm:text-2xl font-bold hover:text-indigo-600 dark:hover:text-indigo-400">
             Turbash Negi
