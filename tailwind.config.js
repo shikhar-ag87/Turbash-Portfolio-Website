@@ -50,11 +50,11 @@ module.exports = {
         cardAlt: {
           about: "#ffffff",
           skills: "#f8fafc",
-          projects: "1e293b",
+          projects: "#f0f4ff",
           dark: {
             about: "#0f172a",
             skills: "#16243e",
-            projects: "0f172a",
+            projects: "#0e1521",
           },
         },
       },

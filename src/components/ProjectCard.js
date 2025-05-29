@@ -12,16 +12,16 @@ const ProjectsCard = (props) => {
         delay: props.index * 0.2,
       }}
       viewport={{ once: true, amount: 0.2 }}
-      className="card bg-cardAlt-projects dark:bg-cardAlt-dark-project overflow-hidden group rounded-2xl shadow-md shadow-black/70 w-full flex flex-col"
+      className="card bg-cardAlt-projects dark:bg-cardAlt-dark-projects overflow-hidden group rounded-2xl shadow-md shadow-black/70 w-full flex flex-col"
     >
-      <div className="image-container h-1/2 overflow-hidden rounded-t-2xl w-full group-hover:scale-105 transition-transform duration-300">
+      <div className="image-container max-h-1/2 overflow-hidden rounded-t-2xl w-full group-hover:scale-105 transition-transform duration-300">
         <img
           alt="Screenshot ot Live Demo of the project"
           src={props.image}
           className=""
         />
       </div>
-      <div className="p-4 flex flex-col gap-2 mt-4">
+      <div className="p-4 flex flex-col gap-2 mt-2 md:mt-4">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-fg dark:text-fg-dark">
           {props.title}
         </h2>
@@ -40,10 +40,10 @@ const ProjectsCard = (props) => {
             );
           })}
         </div>
-        <div className="flex flex-col ms:flex-row gap-4 mt-3 items-start">
+        <div className="flex gap-2 ms:gap-4 mt-2 items-start">
           <a
             href={props.github}
-            className="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 hover:scale-105 transition-transform duration-300"
+            className="bg-primary text-white px-4 ms:px-6 py-1 ms:py-2 rounded-full hover:bg-blue-600 hover:scale-105 transition-transform duration-300"
             target="_blank"
             rel="noreferrer"
           >
@@ -51,7 +51,7 @@ const ProjectsCard = (props) => {
           </a>
           <a
             href={props.demo}
-            className="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-600 hover:scale-105 transition-transform duration-300"
+            className="bg-green-700 text-white px-4 ms:px-6 py-1 ms:py-2 rounded-full hover:bg-green-600 hover:scale-105 transition-transform duration-300"
             target="_blank"
             rel="noreferrer"
           >
