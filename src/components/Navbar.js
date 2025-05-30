@@ -11,6 +11,7 @@ export default function Navbar() {
   const [theme, setTheme] = useState("light");
   const [menuOpen, setMenuOpen] = useState(false);
   const [spin, setSpin] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const links = ["Home", "About", "Skills", "Projects", "Contact"];
 
@@ -30,20 +31,22 @@ export default function Navbar() {
     }
   }, [menuOpen]);
 
-  useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (menuOpen && !e.target.closest(".nav-links-container")) {
-        setMenuOpen(false);
-      }
-    };
-    document.addEventListener("click", handleOutsideClick);
-    return () => document.removeEventListener("click", handleOutsideClick);
-  }, [menuOpen]);
-
   const toggleTheme = () => {
     setSpin(true);
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
     setTimeout(() => setSpin(false), 500);
+  };
+
+  const handleMenuToggle = () => {
+    if (menuOpen) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setMenuOpen(false);
+        setIsClosing(false);
+      }, 300); 
+    } else {
+      setMenuOpen(true);
+    }
   };
 
   return (
@@ -60,7 +63,7 @@ export default function Navbar() {
             {links.map((link) => (
               <a
                 key={link}
-                href={link === "Home" ? "#" : `#${link.toLowerCase()}`}
+                href={`#${link.toLowerCase()}`}
               >
                 <li className="font-semibold text-md lg:text-lg hover:text-primary dark:hover:text-primary-dark cursor-pointer transition-colors duration-300 ">
                   {link}
@@ -79,7 +82,7 @@ export default function Navbar() {
           </button>
 
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={handleMenuToggle}
             className="block md:hidden z-[60]"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
@@ -87,33 +90,35 @@ export default function Navbar() {
               icon={menuOpen ? faTimes : faBars}
               className={`text-2xl cursor-pointer ${
                 menuOpen ? "text-white" : "text-fg"
-              } dark:text-fg-dark hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 ${
+              } dark:text-fg-dark lm:hover:text-indigo-600 lm:dark:hover:text-indigo-400 transition-colors duration-300 ${
                 menuOpen ? "animate-spin-once" : ""
               }`}
             />
           </button>
 
-          <div
-            className={`mobile-view fixed inset-0 bg-slate-900/90 text-white backdrop-blur-sm bg-opacity-70 flex flex-col items-center justify-center z-50 text-3xl space-y-8 ${
-              menuOpen ? "animate-slide-in" : "animate-slide-out"
-            }`}
-          >
-            <ul className="flex flex-col gap-10">
-              {links.map((link) => (
-                <a
-                  key={link}
-                  href={link === "Home" ? "#" : `#${link.toLowerCase()}`}
-                >
-                  <li
-                    onClick={() => setMenuOpen(false)}
-                    className="cursor-pointer hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 font-semibold"
+          {(menuOpen || isClosing) && (
+            <div
+              className={`mobile-view fixed inset-0 bg-slate-900/90 md:hidden text-white backdrop-blur-sm bg-opacity-70 flex flex-col items-center justify-center z-50 text-3xl space-y-8 ${
+                isClosing ? "animate-slide-out" : "animate-slide-in"
+              }`}
+            >
+              <ul className="flex flex-col gap-10">
+                {links.map((link) => (
+                  <a
+                    key={link}
+                    href={`#${link.toLowerCase()}`}
                   >
-                    {link}
-                  </li>
-                </a>
-              ))}
-            </ul>
-          </div>
+                    <li
+                      onClick={() => handleMenuToggle()}
+                      className="cursor-pointer hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 font-semibold"
+                    >
+                      {link}
+                    </li>
+                  </a>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </nav>

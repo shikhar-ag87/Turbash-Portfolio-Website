@@ -9,7 +9,8 @@ module.exports = {
       },
       screens: {
         xs: "400px",
-        ms:"328px"
+        ms:"328px",
+        lm:"426px"
       },
       colors: {
         primary: {
