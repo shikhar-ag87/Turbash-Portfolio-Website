@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSun,
+  faMoon,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [theme, setTheme] = useState("light");
@@ -42,7 +47,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar sticky top-0  px-6 md:px-12 lg:px-20 py-4 z-10">
+    <nav className="navbar sticky top-0 transition-colors duration-500 ease-in-out px-6 md:px-12 lg:px-20 py-4 z-10">
       <div className="mt-2 flex justify-between z-50 bg-white dark:bg-slate-900 text-fg dark:text-fg-dark items-center lg:max-w-[80%] mx-auto border border-border dark:border-border-dark rounded-full px-4 xs:px-8 py-4 shadow-lg shadow-black/70 dark:shadow-white/10">
         <a href="./">
           <span className="text-xl sm:text-2xl font-bold hover:text-indigo-600 dark:hover:text-indigo-400">
@@ -72,49 +77,43 @@ export default function Navbar() {
               }  ${spin ? "animate-spin-once" : ""}`}
             />
           </button>
-          <svg
-            className="block md:hidden cursor-pointer w-6 h-6 text-fg dark:text-fg-dark  hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
-            aria-label="Close menu"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
+
+          <button
             onClick={() => setMenuOpen(!menuOpen)}
+            className="block md:hidden z-[60]"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
-          {menuOpen && (
-            <div className="mobile-view fixed inset-0 bg-slate-900/90 text-white backdrop-blur-sm bg-opacity-70 flex flex-col items-center justify-center z-50 text-3xl space-y-8">
-              <button
-                onClick={() => setMenuOpen(false)}
-                className="absolute top-6 right-6 text-6xl hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
-                aria-label="Close menu"
-              >
-                &times;
-              </button>
-              <ul className="flex flex-col gap-10">
-                {links.map((link) => (
-                  <a
-                    key={link}
-                    href={link === "Home" ? "#" : `#${link.toLowerCase()}`}
+            <FontAwesomeIcon
+              icon={menuOpen ? faTimes : faBars}
+              className={`text-2xl cursor-pointer ${
+                menuOpen ? "text-white" : "text-fg"
+              } dark:text-fg-dark hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 ${
+                menuOpen ? "animate-spin-once" : ""
+              }`}
+            />
+          </button>
+
+          <div
+            className={`mobile-view fixed inset-0 bg-slate-900/90 text-white backdrop-blur-sm bg-opacity-70 flex flex-col items-center justify-center z-50 text-3xl space-y-8 ${
+              menuOpen ? "animate-slide-in" : "animate-slide-out"
+            }`}
+          >
+            <ul className="flex flex-col gap-10">
+              {links.map((link) => (
+                <a
+                  key={link}
+                  href={link === "Home" ? "#" : `#${link.toLowerCase()}`}
+                >
+                  <li
+                    onClick={() => setMenuOpen(false)}
+                    className="cursor-pointer hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 font-semibold"
                   >
-                    <li
-                      onClick={() => setMenuOpen(false)}
-                      className="cursor-pointer hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 font-semibold"
-                    >
-                      {link}
-                    </li>
-                  </a>
-                ))}
-              </ul>
-            </div>
-          )}
+                    {link}
+                  </li>
+                </a>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

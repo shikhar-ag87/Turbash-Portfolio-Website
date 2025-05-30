@@ -12,9 +12,9 @@ const ProjectsCard = (props) => {
         delay: props.index * 0.2,
       }}
       viewport={{ once: true, amount: 0.2 }}
-      className="card bg-cardAlt-projects dark:bg-cardAlt-dark-projects overflow-hidden group rounded-2xl shadow-md shadow-black/70 w-full flex flex-col"
+      className="card bg-cardAlt-projects dark:bg-cardAlt-dark-projects transition-colors duration-500 ease-in-out overflow-hidden group rounded-2xl shadow-md shadow-black/70 w-full flex flex-col justify-evenly"
     >
-      <div className="image-container max-h-1/2 overflow-hidden rounded-t-2xl w-full group-hover:scale-105 transition-transform duration-300">
+      <div className="image-container h-1/2 overflow-hidden rounded-t-2xl w-full group-hover:scale-105 transition-transform duration-300">
         <img
           alt="Screenshot ot Live Demo of the project"
           src={props.image}

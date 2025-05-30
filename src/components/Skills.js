@@ -51,7 +51,7 @@ const Skills = () => {
     },
   ];
   return (
-    <section id="skills" className="bg-sectionBg-skills dark:bg-sectionBg-dark-skills">
+    <section id="skills" className="bg-sectionBg-skills dark:bg-sectionBg-dark-skills transition-colors duration-500 ease-in-out">
       <div className="skills-container py-20 px-6 text-fg dark:text-fg-dark flex flex-col items-center ">
         <h2 className="text-4xl font-bold mb-12 text-indigo-700 dark:text-primary">My Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-14 gap-x-4 w-full justify-items-center lg:max-w-[85%] 2xl:max-w-[70%]">

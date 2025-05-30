@@ -13,7 +13,7 @@ const SkillsCard = ({ title, icon, skills, index }) => {
       }}
       whileHover={{ scale: 1.03 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="card bg-cardAlt-skills dark:bg-cardAlt-dark-skills p-6 lg:p-8 rounded-2xl shadow-md shadow-black/70 border border-border dark:border-border-dark max-w-[400px] min-h-[228px] w-full flex flex-col"
+      className="card bg-cardAlt-skills dark:bg-cardAlt-dark-skills transition-colors duration-500 ease-in-out p-6 lg:p-8 rounded-2xl shadow-md shadow-black/70 border border-border dark:border-border-dark max-w-[400px] min-h-[228px] w-full flex flex-col"
     >
       <div className="card-header flex items-center gap-3 mb-4 ">
         {icon}
@@ -32,7 +32,7 @@ const SkillsCard = ({ title, icon, skills, index }) => {
                 {skill.level}%
               </p>
             </div>
-            <div className="progress-bar w-full h-2 bg-gray-300 dark:bg-bg-dark rounded-full mt-1">
+            <div className="progress-bar w-full h-2 transition-colors duration-500 ease-in-out bg-gray-300 dark:bg-bg-dark rounded-full mt-1">
               <div
                 className="progress rounded-full h-full bg-indigo-600 dark:bg-primary"
                 style={{ width: `${skill.level}%` }}
