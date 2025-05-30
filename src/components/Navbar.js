@@ -8,7 +8,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light" || savedTheme === "dark") {
+    return savedTheme;
+  }
+  if (savedTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+  return "light"; 
+});
   const [menuOpen, setMenuOpen] = useState(false);
   const [spin, setSpin] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -21,6 +32,7 @@ export default function Navbar() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   useEffect(() => {
@@ -43,7 +55,7 @@ export default function Navbar() {
       setTimeout(() => {
         setMenuOpen(false);
         setIsClosing(false);
-      }, 300); 
+      }, 300);
     } else {
       setMenuOpen(true);
     }
@@ -61,10 +73,7 @@ export default function Navbar() {
         <div className="flex nav-links-container gap-4 lg:gap-6 xl:gap-10 items-center">
           <ul className="nav-links hidden md:flex gap-4 lg:gap-6 xl:gap-10">
             {links.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-              >
+              <a key={link} href={`#${link.toLowerCase()}`}>
                 <li className="font-semibold text-md lg:text-lg hover:text-primary dark:hover:text-primary-dark cursor-pointer transition-colors duration-300 ">
                   {link}
                 </li>
@@ -104,10 +113,7 @@ export default function Navbar() {
             >
               <ul className="flex flex-col gap-10">
                 {links.map((link) => (
-                  <a
-                    key={link}
-                    href={`#${link.toLowerCase()}`}
-                  >
+                  <a key={link} href={`#${link.toLowerCase()}`}>
                     <li
                       onClick={() => handleMenuToggle()}
                       className="cursor-pointer hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 font-semibold"
