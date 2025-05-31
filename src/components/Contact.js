@@ -41,7 +41,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="bg-sectionBg-contact dark:bg-sectionBg-dark-contact transition-colors duration-500 ease-in-out px-6 py-20"
+      className="bg-sectionBg-contact dark:bg-sectionBg-dark-contact transition-colors duration-500 ease-in-out overflow-x-hidden px-6 py-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
