@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React to showcase my projects, skills, and professional experience.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+This portfolio website serves as a digital resume and project showcase featuring:
 
-### `npm start`
+- Interactive UI with modern design
+- Responsive layout for all devices
+- Project showcase with descriptions and links
+- Skills and technology expertise section
+- Contact form and professional information
+- Dark/light mode toggle
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- CSS3 / SCSS
+- JavaScript (ES6+)
+- Framer Motion for animations
+- Vercel for deployment
 
-### `npm test`
+## Live Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The portfolio is deployed and live on Vercel: [https://portfolio-website-ten-black-33.vercel.app/](https://portfolio-website-ten-black-33.vercel.app/)
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Responsive Design**: Fully responsive across all device sizes
+- **Dark/Light Mode**: Toggle between color themes with persistent user preference
+- **Interactive UI**: Smooth animations and transitions using Framer Motion
+- **Project Showcase**: Highlighting key projects with descriptions, tech stacks, and links
+- **Skills Section**: Visual representation of technical proficiencies
+- **Contact Form**: Integrated form for direct communication
+- **Social Links**: Quick access to GitHub, LinkedIn, and Twitter profiles
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation and Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```
+   git clone https://github.com/Turbash/portfolio-website.git
+   cd portfolio-website
+   ```
 
-### `npm run eject`
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start the development server:
+   ```
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Build for production:
+   ```
+   npm run build
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── components/      # Reusable UI components
+├── assets/          # Images, icons, and other static files
+├── App.js           # Main application component
+└── index.js         # Entry point
+```
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This portfolio is deployed using Vercel's continuous deployment pipeline. Any changes pushed to the main branch are automatically deployed to the live site.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Connect With Me
 
-### Code Splitting
+- GitHub: [https://github.com/Turbash](https://github.com/Turbash)
+- LinkedIn: [https://linkedin.com/in/turbash-negi](https://linkedin.com/in/turbash-negi)
+- Twitter: [https://twitter.com/Rawatdeepi27862](https://twitter.com/Rawatdeepi27862)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
