@@ -19,6 +19,7 @@ const ProjectsCard = (props) => {
           alt="Screenshot ot Live Demo of the project"
           src={props.image}
           className=""
+          loading="lazy"
         />
       </div>
       <div className="p-4 flex flex-col gap-2 mt-2 md:mt-4">

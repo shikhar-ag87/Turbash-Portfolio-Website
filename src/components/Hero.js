@@ -42,7 +42,7 @@ const Hero = () => {
               </button>
               </a>
               <a href='#contact'>
-              <button className="border border-primary dark:border-primary-dark text-primary dark:text-primary-dark hover:bg-primary/10 dark rounded-full px-8 py-3 transition-scale duration-300 transform hover:scale-105">
+              <button className="border border-primary w-full dark:border-primary-dark text-primary dark:text-primary-dark hover:bg-primary/10 dark rounded-full px-8 py-3 transition-scale duration-300 transform hover:scale-105">
                 Get In Touch
               </button>
               </a>
