@@ -7,8 +7,8 @@ const Projects = () => {
     description:
       "A secure and user-friendly web app for peer-to-peer money lending and group expense splitting. Features include real-time group tracking, transaction history, and a seamless UI for financial coordination between friends or small communities.",
     image: "/assets/cashmate.png",
-    github: "https://github.com/yourusername/cashmate",
-    liveDemo: "https://cashmate.vercel.app",
+    github: "https://github.com/SarveshShahane/CashMate",
+    liveDemo: "https://cash-mate-one.vercel.app",
     techStack: [
       { name: "React", color: "bg-blue-200 dark:bg-blue-100 text-blue-800" },
       { name: "Node.js", color: "bg-green-200 dark:bg-green-100 text-green-800" },
@@ -21,8 +21,8 @@ const Projects = () => {
     description:
       "A specialized logistics and inventory system designed for the International Space Station, enabling optimized stowage, item tracking, and storage space utilization using FastAPI and containerized deployment with Docker.",
     image: "/assets/isstow.png",
-    github: "https://github.com/yourusername/isstow",
-    liveDemo: "https://isstow.vercel.app",
+    github: "https://github.com/alaotach/ISStow",
+    liveDemo: "https://github.com/alaotach/ISStow",
     techStack: [
       { name: "FastAPI", color: "bg-purple-200 dark:bg-purple-100 text-purple-800" },
       { name: "Python", color: "bg-yellow-200 dark:bg-yellow-100 text-yellow-800" },
@@ -34,8 +34,8 @@ const Projects = () => {
     description:
       "A machine learning project that analyzes historical UFC data to predict fight outcomes. Incorporates model training, logistic regression, and finish type classification using Flask and scikit-learn, deployed with an interactive frontend.",
     image: "/assets/ufc.png",
-    github: "https://github.com/yourusername/ufc-fight-predictor",
-    liveDemo: "https://ufc-fight-predictor.vercel.app",
+    github: "https://github.com/Turbash/Ufc-Fight-Predictor",
+    liveDemo: "https://ufc-fight-pedictor.streamlit.app",
     techStack: [
       { name: "Python", color: "bg-yellow-200 dark:bg-yellow-100 text-yellow-800" },
       { name: "Flask", color: "bg-red-200 dark:bg-red-100 text-red-800" },
@@ -47,8 +47,8 @@ const Projects = () => {
     description:
       "A responsive and animated personal portfolio site with support for dark/light themes. Showcases projects, skills, and contact options using smooth Framer Motion transitions and Tailwind CSS for styling.",
     image: "/assets/portfolio.png",
-    github: "https://github.com/yourusername/portfolio",
-    liveDemo: "https://yourportfolio.vercel.app",
+    github: "https://github.com/Turbash/Portfolio-Website",
+    liveDemo: "https://portfolio-website-ten-black-33.vercel.app",
     techStack: [
       { name: "React", color: "bg-blue-200 dark:bg-blue-100 text-blue-800" },
       { name: "Tailwind CSS", color: "bg-cyan-200 dark:bg-cyan-100 text-cyan-800" },

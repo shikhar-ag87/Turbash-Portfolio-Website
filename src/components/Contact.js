@@ -104,7 +104,7 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <motion.div
-            className="flex-1 bg-white dark:bg-[#142438] shadow-md rounded-xl p-6"
+            className="flex-1 bg-white dark:bg-[#142438] shadow-md rounded-xl p-4 xl:p-6"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -116,19 +116,19 @@ const Contact = () => {
             <p className="text-muted dark:text-muted-dark mb-4 flex items-center gap-2">
               <FaEnvelope className="text-2xl text-primary dark:text-primary-dark" />
               <span className="text-fg dark:text-fg-dark">
-                yourname@example.com
+                negirawatdeepi@gmail.com
               </span>
             </p>
             <p className="text-muted dark:text-muted-dark mb-4 flex items-center gap-2">
               <a
-                href="https://yourportfolio.com"
+                href="https://portfolio-website-ten-black-33.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-fg dark:text-fg-dark hover:underline flex gap-2 hover:scale-105"
               >
                 <BiLinkExternal className="text-2xl text-primary dark:text-primary-dark" />
 
-                yourportfolio.com
+                My portfolio
               </a>
             </p>
 
@@ -141,7 +141,7 @@ const Contact = () => {
           </motion.div>
 
           <motion.div
-            className="flex-1 bg-white dark:bg-[#142438] shadow-md rounded-xl p-6"
+            className="flex-1 bg-white dark:bg-[#142438] shadow-md rounded-xl p-4 xl:p-6"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -162,7 +162,7 @@ const Contact = () => {
                 className="flex items-center gap-3"
               >
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/Turbash"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary dark:text-primary-dark hover:underline text-lg flex gap-2 hover:scale-105 transition-transform"
@@ -176,7 +176,7 @@ const Contact = () => {
                 className="flex items-center gap-3"
               >
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/turbash-negi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary dark:text-primary-dark hover:underline text-lg flex gap-2 hover:scale-105 transition-transform"
@@ -190,7 +190,7 @@ const Contact = () => {
                 className="flex items-center gap-3"
               >
                 <a
-                  href="https://twitter.com/yourusername"
+                  href="https://twitter.com/Rawatdeepi27862"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary dark:text-primary-dark hover:underline text-lg flex gap-2 hover:scale-105 transition-transform"

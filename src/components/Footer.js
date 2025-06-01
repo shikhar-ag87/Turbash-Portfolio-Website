@@ -10,15 +10,15 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaGithub className="text-xl" />,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/Turbash",
     },
     {
       icon: <FaLinkedin className="text-xl" />,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://linkedin.com/in/turbash-negi",
     },
     {
       icon: <FaTwitter className="text-xl" />,
-      href: "https://twitter.com/yourusername",
+      href: "https://twitter.com/Rawatdeepi27862",
     },
   ];
 
