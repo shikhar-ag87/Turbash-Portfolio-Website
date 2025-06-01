@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
@@ -13,9 +14,30 @@ import { BiLinkExternal } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Message sent!");
+    setStatus("Sending...");
+
+    const form = new FormData(e.target);
+
+    const res = await fetch("https://formspree.io/f/mldnrknn", {
+      method: "POST",
+      body: form,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    const result = await res.json();
+
+    if (res.ok) {
+      setStatus("Message sent successfully!");
+      e.target.reset();
+    } else {
+      setStatus(result?.message || "Something went wrong.");
+    }
   };
 
   const containerVariants = {
@@ -68,31 +90,56 @@ const Contact = () => {
           <h3 className="text-2xl font-semibold text-fg dark:text-fg-dark mb-6 flex items-center gap-2">
             <FaPaperPlane /> Send a Message
           </h3>
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <input
               type="text"
+              name="name"
+              required
               placeholder="Your Name"
               className="w-full p-3 rounded-md bg-bg dark:bg-[#152238] text-fg dark:text-fg-dark border border-border dark:border-border-dark"
             />
             <input
               type="email"
+              name="email"
+              required
               placeholder="Your Email"
               className="w-full p-3 rounded-md bg-bg dark:bg-[#152238] text-fg dark:text-fg-dark border border-border dark:border-border-dark"
             />
             <textarea
+              name="message"
               rows="5"
+              required
               placeholder="Your Message"
               className="w-full p-3 rounded-md bg-bg dark:bg-[#152238] text-fg dark:text-fg-dark border border-border dark:border-border-dark resize-none"
             ></textarea>
             <motion.button
               type="submit"
-              onClick={handleSubmit}
               className="bg-primary dark:bg-primary-dark text-white px-6 py-2 rounded-md hover:brightness-90 hover:scale-105 transition flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Send Message <FaPaperPlane />
             </motion.button>
+            {status && (
+  <motion.div
+    className={`mt-4 px-4 py-3 rounded-md text-sm font-medium flex items-center gap-2 ${
+      status.includes("success")
+        ? "bg-green-100 text-green-800 dark:bg-green-200/10 dark:text-green-400"
+        : "bg-red-100 text-red-800 dark:bg-red-200/10 dark:text-red-400"
+    }`}
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.4 }}
+  >
+    {status.includes("success") ? (
+      <FaPaperPlane className="text-green-500 dark:text-green-400" />
+    ) : (
+      <FaEnvelope className="text-red-500 dark:text-red-400" />
+    )}
+    {status}
+  </motion.div>
+)}
+
           </form>
         </motion.div>
 
@@ -127,7 +174,6 @@ const Contact = () => {
                 className="text-fg dark:text-fg-dark hover:underline flex gap-2 hover:scale-105"
               >
                 <BiLinkExternal className="text-2xl text-primary dark:text-primary-dark" />
-
                 My portfolio
               </a>
             </p>
