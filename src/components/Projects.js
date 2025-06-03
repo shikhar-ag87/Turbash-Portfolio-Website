@@ -6,7 +6,7 @@ const Projects = () => {
     title: "Cashmate",
     description:
       "A secure and user-friendly web app for peer-to-peer money lending and group expense splitting. Features include real-time group tracking, transaction history, and a seamless UI for financial coordination between friends or small communities.",
-    image: "/assets/cashmate.png",
+    image: "/assets/cashmate.webp",
     github: "https://github.com/SarveshShahane/CashMate",
     liveDemo: "https://cash-mate-one.vercel.app",
     techStack: [
@@ -20,7 +20,7 @@ const Projects = () => {
     title: "ISStow",
     description:
       "A specialized logistics and inventory system designed for the International Space Station, enabling optimized stowage, item tracking, and storage space utilization using FastAPI and containerized deployment with Docker.",
-    image: "/assets/isstow.png",
+    image: "/assets/isstow.webp",
     github: "https://github.com/alaotach/ISStow",
     liveDemo: "https://github.com/alaotach/ISStow",
     techStack: [
@@ -33,7 +33,7 @@ const Projects = () => {
     title: "UFC Fight Predictor",
     description:
       "A machine learning project that analyzes historical UFC data to predict fight outcomes. Incorporates model training, logistic regression, and finish type classification using Flask and scikit-learn, deployed with an interactive frontend.",
-    image: "/assets/ufc.png",
+    image: "/assets/ufc.webp",
     github: "https://github.com/Turbash/Ufc-Fight-Predictor",
     liveDemo: "https://ufc-fight-pedictor.streamlit.app",
     techStack: [
@@ -46,7 +46,7 @@ const Projects = () => {
     title: "Portfolio Website",
     description:
       "A responsive and animated personal portfolio site with support for dark/light themes. Showcases projects, skills, and contact options using smooth Framer Motion transitions and Tailwind CSS for styling.",
-    image: "/assets/portfolio.png",
+    image: "/assets/portfolio.webp",
     github: "https://github.com/Turbash/Portfolio-Website",
     liveDemo: "https://portfolio-website-ten-black-33.vercel.app",
     techStack: [
