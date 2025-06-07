@@ -69,6 +69,7 @@ const Contact = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
+      <div className="relative z-[2]">
       <motion.h2
         className="text-4xl font-bold text-fg dark:text-fg-dark text-center mb-12"
         initial={{ y: -20, opacity: 0 }}
@@ -248,6 +249,7 @@ const Contact = () => {
             </motion.ul>
           </motion.div>
         </motion.div>
+      </div>
       </div>
     </motion.section>
   );

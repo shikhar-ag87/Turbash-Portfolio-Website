@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#f3f4f6] dark:bg-[#0a1120] text-fg dark:text-fg-dark transition-colors duration-500 ease-in-out">
-      <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-8 z-[2] relative">
         <div className="flex flex-col items-center md:items-start gap-4">
           <div className="flex items-center gap-2 text-xl font-semibold text-primary dark:text-primary-dark">
             <FaCode />

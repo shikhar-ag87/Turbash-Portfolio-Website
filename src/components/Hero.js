@@ -3,8 +3,8 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
-    <section className="px-6 py-20 transition-colors duration-500 ease-in-out lg:py-32 z-0 relative ">
-      <div className="lg:max-w-[85%] mx-auto flex flex-col md:flex-row gap-10 items-center justify-between">
+    <section className="px-6 py-20 transition-colors duration-500 ease-in-out lg:py-32 relative">
+      <div className="lg:max-w-[85%] mx-auto flex flex-col md:flex-row gap-10 items-center justify-between z-[2] relative">
         <div className="left-content justify-items-center lg:w-1/2">
           <div className="text-container text-center md:text-left items-center md:items-start gap-4 flex flex-col">
             <h1 className="text-4xl md:text-6xl font-bold">

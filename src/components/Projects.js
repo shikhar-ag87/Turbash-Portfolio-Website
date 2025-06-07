@@ -63,7 +63,7 @@ const Projects = () => {
       id="projects"
       className="bg-sectionBg-projects dark:bg-sectionBg-dark-projects transition-colors duration-500 ease-in-out"
     >
-      <div className="projects-container py-20 px-6  text-fg dark:text-fg-dark flex flex-col items-center ">
+      <div className="projects-container py-20 px-6  text-fg dark:text-fg-dark flex flex-col items-center z-[2] relative">
         <h2 className="text-4xl font-bold mb-12 text-indigo-700 dark:text-primary">
           My Projects
         </h2>
