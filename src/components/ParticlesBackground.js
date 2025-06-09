@@ -32,17 +32,17 @@ export default function ParticlesBackground() {
     particles: {
       number: { value: 80, density: { enable: true, area: 600 } },
       shape: { type: "circle" },
-      opacity: { value: 0.2 },
+      opacity: { value: isDark?0.2:0.6 },
       size: { value: { min: 1, max: 3 } },
       move: { enable: true, speed: 0.6 },
       color: {
-        value: isDark ? "#e5e7eb" : "#334155"  // slate-200 in dark, slate-800 in light
+        value: isDark ? "#e5e7eb" : "#3b82f6"  // slate-200 in dark, slate-800 in light
       },
       links: {
         enable: true,
         distance: 180,
-        color: isDark ? "#e5e7eb" : "#334155",
-        opacity: 0.2,
+        color: isDark ? "#e5e7eb" : "#3b82f6",
+        opacity: isDark?0.2:0.6,
         width: 0.2,
       },
     },
